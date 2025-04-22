@@ -150,7 +150,7 @@ function AuctionClient({ auctionKey }: Props) {
     }
   };
 
-  let subscription: StompJs.StompSubscription | null = null;
+  const subscription: StompJs.StompSubscription | null = null;
 
   const setImageUrl = async (imageUrl: string) => {
     const url = await downloadUrl(imageUrl);

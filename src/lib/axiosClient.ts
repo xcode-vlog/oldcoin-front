@@ -1,4 +1,6 @@
 "use client";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import axios from "axios";
 
 export type NetworkError = {
@@ -42,7 +44,6 @@ axiosClient.interceptors.response.use(
     return response;
   },
   async (error) => {
-    debugger;
     console.log(error);
     if (error.name == "AxiosError") {
       const data: ResponseModel<any> = {

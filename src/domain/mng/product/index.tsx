@@ -10,7 +10,6 @@ import {
 } from "@tanstack/react-table";
 import { useCallback, useEffect, useState } from "react";
 import { axiosClient, ResponseModel, successCode } from "@/lib/axiosClient";
-import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import {
   CommonTableContent,

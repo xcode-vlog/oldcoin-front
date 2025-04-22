@@ -18,7 +18,7 @@ function ActiveAuctionRow({
   handleCloseAuction,
 }: Props) {
   const [contextOrigin, setContextOrigin] = useState<string>("");
-  const { auctionKey, status, productInfo, isStart } = auction;
+  const { auctionKey, productInfo, isStart } = auction;
 
   const handleUpdateBid = async (auctionKey: string, openState: string) => {
     const URL = `/auction/bid-${openState}/${auctionKey}`;

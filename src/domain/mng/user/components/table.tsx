@@ -137,7 +137,7 @@ export const UserColumn: ColumnDef<UserTableInfo>[] = [
     id: "actions",
     enableHiding: false,
     cell: ({ row }) => {
-      const user = row.original;
+      // const user = row.original;
 
       return (
         <DropdownMenu>

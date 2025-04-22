@@ -9,7 +9,7 @@ interface Props {
 
 function InactiveAuctionRow({ auction }: Props) {
   const [contextOrigin, setContextOrigin] = useState<string>("");
-  const { auctionKey, status, productInfo } = auction;
+  const { auctionKey, productInfo } = auction;
 
   useEffect(() => {
     setContextOrigin(window.location.origin);

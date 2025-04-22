@@ -2,11 +2,10 @@ import { ColumnDef } from "@tanstack/react-table";
 import { ProductTableInfo } from "..";
 import { Button } from "@/components/ui/button";
 import { numberWithCommas } from "@/lib/commonUtils";
-import { downloadUrl } from "@/firebase/fireStorage";
 import Image from "next/image";
 import { NoImage } from "@/components/custom/element/NoImage";
-import { Avatar } from "@/components/ui/avatar";
-import { AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
+
+
 
 export const ProductColumn: ColumnDef<ProductTableInfo>[] = [
   {

@@ -2,7 +2,7 @@ import * as StompJs from "@stomp/stompjs";
 
 export function useStompClient() {
   const stompClient = new StompJs.Client({
-    brokerURL: "ws://localhost:8080/stomp/auction",
+    brokerURL: `${process.env.NEXT_PUBLIC_SOCKET_URL}/stomp/auction`,
   });
 
   stompClient.onStompError = (frame: StompJs.IFrame) => {
@@ -19,6 +19,8 @@ export function useStompClient() {
   };
   stompClient.onDisconnect = (frame: StompJs.IFrame) => {
     console.log("stomp disconnect");
+    console.log(frame)
+    
   };
 
   return { stompClient };

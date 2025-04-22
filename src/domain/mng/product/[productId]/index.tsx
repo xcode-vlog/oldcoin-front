@@ -1,5 +1,5 @@
 "use client";
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { PreSpacedFormMessage } from "@/components/custom/element/CustomFormMessage";
 import { PageTitle } from "@/components/custom/element/PageTitle";
 import { Button } from "@/components/ui/button";
@@ -166,7 +166,7 @@ function ProductRegistClient({ productId }: Props) {
       productId,
     };
     const res = await axiosClient.post<ResponseModel<null>>(URL, postData);
-    const { code, data, message } = res.data;
+    const { code, message } = res.data;
     if (code != successCode) {
       alert(message);
       return;
